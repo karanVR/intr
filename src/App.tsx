@@ -26,9 +26,9 @@ function App() {
   return (
     <themeContext.Provider value={{ appTheme, setAppTheme }}>
       <userDataContext.Provider value={{ userData }}>
-        <div className={clsx('flex flex-col w-[100%] flex-grow-1 h-[100vh] p-4', { "bg-black text-white": appTheme === "dark", })}>
+        <div className={clsx('flex flex-col w-[100%] flex-grow-1 h-[100vh] p-4 justify-start', { "bg-black text-white": appTheme === "dark", })}>
           <div className='ml-auto w-fit'><ThemeToggle /></div>
-          <div className='w-[100vw] h-[100vh] items-center justify-center text-center flex-grow-1'>
+          <div className='w-[100vw] h-[100vh] items-center justify-start text-center flex-grow-1'>
             {userDataLoading ? <Loader />:<Dashboard />}
           </div> 
         </div>
